@@ -8,6 +8,7 @@ bringBackBlinky();
 function bringBackBlinky() {
 
 if (swi == 1) {
+document.body.bgColor="lavender"
 sho="visible";
 swi=0;
 }
@@ -25,6 +26,52 @@ setTimeout("bringBackBlinky()", spe);
 -->
 </script>
 
+<SCRIPT LANGUAGE="JavaScript">
+/* Visit http://www.yaldex.com/ for full source code
+and get more free JavaScript, CSS and DHTML scripts! */
+<!-- Begin
+var pos = 10;
+var canGo=true;
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var col=new initArray("4b","5b","8b","8b");
+function Stop() {
+document.bgColor = '#FFFFFF';
+clearInterval(loopID);
+canGo=true;
+}
+function Go() {
+col[1]="red"
+col[2]="yellowgreen"
+col[3]="yellow"
+col[4]="whitesmoke"
+col[5]="white"
+col[6]="wheat"
+col[7]="violet"
+col[8]="turquoise"
+col[9]="tomato"
+col[10]="thistle"
+pos++;
+if (pos<0||pos>10) {
+pos = 0;
+}
+document.bgColor = col[pos];
+//loopID = setTimeout("Start()",50);
+
+}
+function Start()
+{
+   if(canGo) loopID =setInterval("Go()",50);
+    canGo=false;
+}
+window.onload=Start;
+// End -->
+</SCRIPT>
+ 
 <FONT COLOR=" #CC00FF"><marquee behavior="scroll" direction="left" scrollamount="10" style="font-size:100px;"><blink>HELLO PAGODABOX</blink></marquee></FONT>
 <FONT COLOR="#00FFFF"><marquee behavior="scroll" direction="left" scrollamount="10" style="font-size:100px;"><blink>HELLO PAGODABOX</blink></marquee></FONT>
 <FONT COLOR="GREEN"><marquee behavior="scroll" direction="left" scrollamount="10" style="font-size:100px;"><blink>HELLO PAGODABOX</blink></marquee></FONT>
